@@ -1,0 +1,453 @@
+# Docs by LangChain: AGENT DEVELOPMENT LIFECYCLE Build TypeScript
+
+> Documentation for LangSmith, Fleet, and our open source packages.
+
+## TypeScript
+
+### Overview
+
+- [Build](https://docs.langchain.com/build-overview.md): Build agents with Managed Deep Agents, Deep Agents, LangChain, LangGraph, and Fleet.
+
+### Managed Deep Agents
+
+#### Get started
+
+- [Managed Deep Agents](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-overview.md): Build your agent as a directory of files while LangSmith runs the harness and runtime.
+- [Managed Deep Agents quickstart](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-quickstart.md): Create and deploy your first Managed Deep Agent with the mda CLI.
+- [Managed Deep Agents project structure](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-project-structure.md): Understand the project layout for Managed Deep Agents.
+- [Move from Deep Agents to Managed Deep Agents](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-migrate.md): Convert an agent built with create_deep_agent into a Managed Deep Agents project.
+
+#### Agent capabilities
+
+- [Define a Managed Deep Agent](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-agent-definition.md): Configure the model and core capabilities of a managed deep agent.
+- [Add instructions to Managed Deep Agents](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-instructions.md): Define the system prompt for a managed deep agent in instructions.md.
+- [Add skills to Managed Deep Agents](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-skills.md): Add reusable task-specific instructions to a managed deep agent.
+- [Add custom tools to Managed Deep Agents](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-tools.md): Define authored tools for managed deep agents projects.
+- [Built-in search powered by Parallel](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-search.md): Add web search powered by Parallel to Managed Deep Agents without a separate account or API key.
+- [Manage connections](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-connections.md): Store API keys and OAuth grants so Managed Deep Agents can authenticate with external services at runtime.
+- [Connect to MCP servers](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-mcp-connectors.md): Add tools from remote MCP servers to a managed deep agent.
+- [Add custom middleware to Managed Deep Agents](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-middleware.md): Add built-in or custom middleware to a managed deep agent.
+- [Add memory to Managed Deep Agents](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-memory.md): Opt in to durable agent and user memory layers for a managed deep agent.
+- [Add a sandbox to Managed Deep Agents](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-sandboxes.md): Configure an isolated filesystem and shell for a managed deep agent.
+- [Browser use](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-browser-use.md): Configure browser sharing, website logins, and human handoff for a managed deep agent.
+- [Subagents](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-subagents.md): Delegate work to subagents that run inline or in the background for a managed deep agent.
+- [Add identity to Managed Deep Agents](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-identity.md): Authenticate callers to a Managed Deep Agents deployment with a LangSmith API key, Supabase, another JWT provider, or your own backend.
+- [Add schedules to Managed Deep Agents](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-schedules.md): Declare managed cron schedules for Managed Deep Agents deployments, or create them at runtime.
+- [Evaluate Managed Deep Agents](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-evals.md): Develop Harbor evals for Managed Deep Agents with a coding agent and the eval-engineering skill.
+- [Managed Deep Agents runtime](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-runtime.md): Read run context, the verified caller, the thread, and the sandbox from the native runtime types that agent factories, tools, and middleware receive.
+
+##### Channels
+
+- [Connect Managed Deep Agents to channels](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-channels.md): Connect Managed Deep Agents to external messaging services that can start runs and receive responses.
+- [Connect a Managed Deep Agent to Slack](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-channels-slack.md): Start Managed Deep Agents runs from Slack messages and send responses to Slack conversations.
+- [Connect a Managed Deep Agent over HTTP](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-channels-http.md): Start Managed Deep Agents runs from any external service that can send a webhook, and return responses through your own transport.
+- [Prompt Slack users with agent-owned interrupts](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-agent-owned-interrupts.md): Post a Slack form from a Managed Deep Agents tool, pause the run, and resume it when the user submits the form.
+
+#### Build and deploy
+
+- [Develop locally with LangSmith Studio](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-local-development.md): Run and test a Managed Deep Agent locally with mda dev and LangSmith Studio.
+- [Add a custom search tool, memory, and a schedule](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-tutorial.md): Replace provider search with a Tavily tool, then add durable memory and a daily schedule to the research assistant from the quickstart.
+- [Deploy a Managed Deep Agent](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-deploy.md): Test and deploy a Managed Deep Agent with the mda CLI.
+- [Connect MCP clients to a Managed Deep Agent](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-mcp-endpoint.md): Expose a deployed Managed Deep Agent as a tool to MCP clients such as Claude Code.
+- [Build a custom frontend for a Managed Deep Agent](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-custom-frontend.md): Call a Managed Deep Agents deployment from your own browser or server application instead of reaching the agent through a channel or LangSmith Studio.
+- [Manage Context Hub for Managed Deep Agents](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-context-hub.md): Understand how Managed Deep Agents stores instructions, skills, and durable memory in LangSmith Context Hub.
+- [Managed Deep Agents CLI reference](https://docs.langchain.com/langsmith/javascript/managed-deep-agents-cli.md): Reference for mda commands, project files, and deploy behavior.
+
+### Deep Agents
+
+- [Deep Agents overview](https://docs.langchain.com/oss/javascript/deepagents/overview.md): Agent harness for planning, subagents, and file-system context, available as Managed Deep Agents or the Deep Agents SDK
+
+#### Get started
+
+- [Quickstart](https://docs.langchain.com/oss/javascript/deepagents/quickstart.md): Build your first deep agent in minutes
+- [Customize Deep Agents](https://docs.langchain.com/oss/javascript/deepagents/customization.md): Learn how to customize Deep Agents with system prompts, tools, subagents, and more
+- [Models](https://docs.langchain.com/oss/javascript/deepagents/models.md): Configure model providers and parameters for Deep Agents
+- [Comparison with Claude Agent SDK](https://docs.langchain.com/oss/javascript/deepagents/comparison.md): Compare LangChain Deep Agents and Managed Deep Agents with the Claude Agent SDK to choose the right tool for your use case.
+
+#### Deployment
+
+##### Going to production
+
+- [Going to production](https://docs.langchain.com/oss/javascript/deepagents/going-to-production.md): Take your deep agent to production with persistent memory, sandboxes, resilience middleware, and deployment options
+- [Fault tolerance](https://docs.langchain.com/oss/javascript/deepagents/fault-tolerance.md): Make your deep agent resilient with rate limiting, retries, fallbacks, and error handling
+
+#### Execution environment
+
+- [Tools](https://docs.langchain.com/oss/javascript/deepagents/tools.md): Connect Deep Agents to custom functions, APIs, databases, and any MCP server
+- [Backends](https://docs.langchain.com/oss/javascript/deepagents/backends.md): Choose and configure filesystem backends for Deep Agents. You can specify routes to different backends, implement virtual filesystems, and enforce policies.
+- [Permissions](https://docs.langchain.com/oss/javascript/deepagents/permissions.md): Control filesystem access with declarative permission rules for Deep Agents
+- [Multimodal inputs and outputs](https://docs.langchain.com/oss/javascript/deepagents/multimodal.md): Use images, audio, video, and documents with Deep Agents when your model supports multimodal inputs and tool results
+- [Sandboxes](https://docs.langchain.com/oss/javascript/deepagents/sandboxes.md): Execute code in isolated environments with sandbox backends
+- [Browser use](https://docs.langchain.com/oss/javascript/deepagents/browser-use.md): Give a deep agent a browser so it can take actions on websites and test web apps end to end.
+- [Interpreters](https://docs.langchain.com/oss/javascript/deepagents/interpreters.md): Run lightweight code inside Deep Agents to compose tools, orchestrate subagents, and transform structured data
+- [Event streaming](https://docs.langchain.com/oss/javascript/deepagents/event-streaming.md): Stream subagents, messages, tool calls, and final output from Deep Agents.
+- [Streaming](https://docs.langchain.com/oss/javascript/deepagents/streaming.md): Stream real-time updates from deep agent runs and subagent execution
+
+#### Context management
+
+- [Skills](https://docs.langchain.com/oss/javascript/deepagents/skills.md): Learn how to extend your deep agent's capabilities with skills
+- [Memory](https://docs.langchain.com/oss/javascript/deepagents/memory.md): Add persistent memory to agents built with Deep Agents so they learn and improve across conversations
+- [Retrieval](https://docs.langchain.com/oss/javascript/deepagents/retrieval.md)
+- [Context engineering in Deep Agents](https://docs.langchain.com/oss/javascript/deepagents/context-engineering.md): Control what context your deep agent has access to and how it is managed across long-running tasks
+- [Profiles](https://docs.langchain.com/oss/javascript/deepagents/profiles.md): Package per-provider and per-model defaults that Deep Agents applies when a model is selected
+
+#### Delegation
+
+- [Subagents](https://docs.langchain.com/oss/javascript/deepagents/subagents.md): Learn how to use subagents to delegate work and keep context clean
+- [Dynamic subagents](https://docs.langchain.com/oss/javascript/deepagents/dynamic-subagents.md): Use interpreters to dispatch and orchestrate Deep Agents subagents from code
+- [Async subagents](https://docs.langchain.com/oss/javascript/deepagents/async-subagents.md): Launch background subagents that run concurrently while the supervisor continues interacting with the user
+
+#### Steering
+
+- [Human-in-the-loop](https://docs.langchain.com/oss/javascript/deepagents/human-in-the-loop.md): Learn how to configure human approval for sensitive tool operations
+
+#### Middleware
+
+- [Middleware overview](https://docs.langchain.com/oss/javascript/langchain/middleware/overview.md): Control and customize agent execution at every step
+- [Prebuilt middleware](https://docs.langchain.com/oss/javascript/langchain/middleware/built-in.md): Prebuilt middleware for common agent use cases
+- [Custom middleware](https://docs.langchain.com/oss/javascript/langchain/middleware/custom.md)
+
+#### Frontend
+
+- [Overview](https://docs.langchain.com/oss/javascript/deepagents/frontend/overview.md): Build UIs that display real-time subagent streams, task progress, and sandbox for Deep Agents
+
+##### Patterns
+
+- [Subagent streaming](https://docs.langchain.com/oss/javascript/deepagents/frontend/subagent-streaming.md): Display specialist subagents with streaming content, progress tracking, and collapsible cards
+- [Todo list](https://docs.langchain.com/oss/javascript/deepagents/frontend/todo-list.md): Track agent progress with a real-time todo list synced from agent state
+- [Sandbox](https://docs.langchain.com/oss/javascript/deepagents/frontend/sandbox.md): Build an IDE-like UI for a coding agent backed by a sandbox environment
+
+#### Protocols
+
+- [Agent Client Protocol (ACP)](https://docs.langchain.com/oss/javascript/deepagents/acp.md): Expose Deep Agents over the Agent Client Protocol (ACP) to integrate with code editors and IDEs.
+- [Agent User Interaction Protocol (AG-UI)](https://docs.langchain.com/oss/javascript/deepagents/ag-ui.md): Expose deep agents over the Agent User Interaction Protocol (AG-UI) to stream events to any AG-UI client or frontend.
+
+### LangChain
+
+- [LangChain overview](https://docs.langchain.com/oss/javascript/langchain/overview.md): LangChain provides create_agent: a minimal, highly configurable agent harness. Compose exactly the agent your use case needs from model, tools, prompt, and middleware.
+
+#### Get started
+
+- [Install LangChain](https://docs.langchain.com/oss/javascript/langchain/install.md): Install the LangChain package and the independent provider packages for the models and integrations you use.
+- [Quickstart](https://docs.langchain.com/oss/javascript/langchain/quickstart.md): Build your first agent in minutes
+- [Philosophy](https://docs.langchain.com/oss/javascript/langchain/philosophy.md): LangChain exists to be the easiest place to start building with LLMs, while also being flexible and production-ready.
+
+#### Core components
+
+- [Agents](https://docs.langchain.com/oss/javascript/langchain/agents.md): Build a LangChain agent: a model calling tools in a loop until a task is complete, shaped by a harness of prompt, tools, and middleware.
+- [Models](https://docs.langchain.com/oss/javascript/langchain/models.md): Initialize and configure chat models, the reasoning engine of LangChain agents, with support for tool calling, structured output, and multimodal inputs.
+- [Messages](https://docs.langchain.com/oss/javascript/langchain/messages.md)
+- [Tools](https://docs.langchain.com/oss/javascript/langchain/tools.md): Define tools that let LangChain agents fetch real-time data, execute code, query external databases, and take actions.
+- [Short-term memory](https://docs.langchain.com/oss/javascript/langchain/short-term-memory.md)
+- [Event streaming](https://docs.langchain.com/oss/javascript/langchain/event-streaming.md): Stream real-time updates from LangChain agent runs
+- [Streaming](https://docs.langchain.com/oss/javascript/langchain/streaming.md): Stream real-time updates from agent runs
+- [Structured output](https://docs.langchain.com/oss/javascript/langchain/structured-output.md)
+
+#### Middleware
+
+- [Middleware overview](https://docs.langchain.com/oss/javascript/langchain/middleware/overview.md): Control and customize agent execution at every step
+- [Prebuilt middleware](https://docs.langchain.com/oss/javascript/langchain/middleware/built-in.md): Prebuilt middleware for common agent use cases
+- [Custom middleware](https://docs.langchain.com/oss/javascript/langchain/middleware/custom.md)
+
+#### Frontend
+
+- [Overview](https://docs.langchain.com/oss/javascript/langchain/frontend/overview.md): Build generative UIs with real-time streaming from LangChain agents
+
+##### Patterns
+
+- [Markdown messages](https://docs.langchain.com/oss/javascript/langchain/frontend/markdown-messages.md): Render LLM responses as rich, formatted markdown with proper streaming support
+- [Tool calling](https://docs.langchain.com/oss/javascript/langchain/frontend/tool-calling.md): Display agent tool calls with rich, type-safe UI cards
+- [Headless tools](https://docs.langchain.com/oss/javascript/langchain/frontend/headless-tools.md): Run browser and device APIs on the client with headless tool implementations
+- [Human-in-the-Loop](https://docs.langchain.com/oss/javascript/langchain/frontend/human-in-the-loop.md): Add approval workflows with interrupt-based human review
+- [Branching chat](https://docs.langchain.com/oss/javascript/langchain/frontend/branching-chat.md): Edit messages and regenerate responses by forking from checkpoints
+- [Reasoning tokens](https://docs.langchain.com/oss/javascript/langchain/frontend/reasoning-tokens.md): Display model thinking and reasoning processes in collapsible blocks
+- [Structured output](https://docs.langchain.com/oss/javascript/langchain/frontend/structured-output.md): Render structured agent responses with custom UI components instead of plain text
+- [Message queues](https://docs.langchain.com/oss/javascript/langchain/frontend/message-queues.md): Queue multiple messages and manage them while the agent processes sequentially
+- [Join & rejoin streams](https://docs.langchain.com/oss/javascript/langchain/frontend/join-rejoin.md): Disconnect from and reconnect to running agent streams
+- [Time travel](https://docs.langchain.com/oss/javascript/langchain/frontend/time-travel.md): Inspect, navigate, and resume from any checkpoint in the conversation history
+
+###### Generative UI
+
+- [Generative UI overview](https://docs.langchain.com/oss/javascript/langchain/frontend/generative-ui-overview.md): Understand the generative UI spectrum from controlled to declarative to open-ended interfaces
+- [Controlled generative UI](https://docs.langchain.com/oss/javascript/langchain/frontend/controlled-generative-ui.md): Render agent output with components you author using components as tools, tool-call rendering, state rendering, and reasoning
+- [Declarative generative UI](https://docs.langchain.com/oss/javascript/langchain/frontend/declarative-generative-ui.md): Compose agent-generated interfaces from a registered component catalog using json-render and A2UI
+- [Open-ended generative UI](https://docs.langchain.com/oss/javascript/langchain/frontend/open-ended-generative-ui.md): Render UI created outside your application, such as sandboxed MCP Apps, at the open end of the generative UI spectrum
+
+##### Integrations
+
+- [Overview](https://docs.langchain.com/oss/javascript/langchain/frontend/integrations/overview.md): Connect useStream to any React UI component library or generative UI framework
+- [CopilotKit](https://docs.langchain.com/oss/javascript/langchain/frontend/integrations/copilotkit.md): Use CopilotKit with LangGraph, Deep Agents, and React with custom endpoints, the Python AG-UI bridge, structured generative UI, and messaging-platform channels
+- [AI Elements](https://docs.langchain.com/oss/javascript/langchain/frontend/integrations/ai-elements.md): Composable shadcn/ui-based components for AI chat interfaces with useStream
+- [assistant-ui](https://docs.langchain.com/oss/javascript/langchain/frontend/integrations/assistant-ui.md): Headless React AI chat framework with a full runtime layer, bridged to useStream
+- [OpenUI](https://docs.langchain.com/oss/javascript/langchain/frontend/integrations/openui.md): Generate complete, interactive dashboards and reports using the OpenUI component library and openui-lang
+
+#### Advanced usage
+
+- [Guardrails](https://docs.langchain.com/oss/javascript/langchain/guardrails.md): Implement safety checks and content filtering for your agents
+- [Runtime](https://docs.langchain.com/oss/javascript/langchain/runtime.md)
+- [Context engineering in agents](https://docs.langchain.com/oss/javascript/langchain/context-engineering.md)
+- [Human-in-the-loop](https://docs.langchain.com/oss/javascript/langchain/human-in-the-loop.md)
+- [Retrieval](https://docs.langchain.com/oss/javascript/deepagents/retrieval.md)
+- [Long-term memory](https://docs.langchain.com/oss/javascript/langchain/long-term-memory.md): Add long-term memory to LangChain agents to store and recall data across conversations and sessions
+
+##### MCP
+
+- [Model Context Protocol (MCP)](https://docs.langchain.com/oss/javascript/langchain/mcp/index.md): Connect LangChain agents to MCP servers with MCPAdapter.
+- [Tools](https://docs.langchain.com/oss/javascript/langchain/mcp/tools.md): Load MCP tools into LangChain agents, control their execution, and handle server results and requests.
+- [Connections](https://docs.langchain.com/oss/javascript/langchain/mcp/connections.md): Connection lifecycle, multiple servers, deployment scaling, protocol eras, and caching for MCP in LangChain.
+- [Authentication](https://docs.langchain.com/oss/javascript/langchain/mcp/auth.md): Authenticate MCP connections with bearer tokens, OAuth 2.1, or per-user credentials in LangChain.
+
+##### Multi-agent
+
+- [Multi-agent](https://docs.langchain.com/oss/javascript/langchain/multi-agent/index.md)
+- [Subagents](https://docs.langchain.com/oss/javascript/langchain/multi-agent/subagents.md)
+- [Handoffs](https://docs.langchain.com/oss/javascript/langchain/multi-agent/handoffs.md)
+- [Skills](https://docs.langchain.com/oss/javascript/langchain/multi-agent/skills.md)
+- [Router](https://docs.langchain.com/oss/javascript/langchain/multi-agent/router.md)
+- [Custom workflow](https://docs.langchain.com/oss/javascript/langchain/multi-agent/custom-workflow.md)
+
+#### Agent development
+
+- [LangSmith Studio](https://docs.langchain.com/oss/javascript/langchain/studio.md)
+- [Agent Chat UI](https://docs.langchain.com/oss/javascript/langchain/ui.md)
+
+##### Test
+
+- [Test](https://docs.langchain.com/oss/javascript/langchain/test/index.md): Strategies for testing LangChain agents, including unit tests, integration tests, and trajectory evaluations.
+- [Unit testing](https://docs.langchain.com/oss/javascript/langchain/test/unit-testing.md): Test agent logic without API calls using fake chat models and in-memory persistence.
+- [Integration testing](https://docs.langchain.com/oss/javascript/langchain/test/integration-testing.md): Test agents with real LLM APIs by organizing tests, managing keys, handling flakiness, and controlling costs.
+- [Agent Evals](https://docs.langchain.com/oss/javascript/langchain/test/evals.md): Evaluate agent trajectories using deterministic matching or LLM-as-judge evaluators with AgentEvals and LangSmith.
+
+#### Production
+
+- [Deployment](https://docs.langchain.com/oss/javascript/langchain/deploy.md): Deploy LangChain agents to production with LangSmith Cloud or JavaScript frameworks and hosting platforms.
+- [LangSmith Observability](https://docs.langchain.com/oss/javascript/langchain/observability.md)
+
+### LangGraph
+
+- [LangGraph overview](https://docs.langchain.com/oss/javascript/langgraph/overview.md): Gain control with LangGraph to design agents that reliably handle complex tasks
+
+#### Get started
+
+- [Install LangGraph](https://docs.langchain.com/oss/javascript/langgraph/install.md)
+- [Quickstart](https://docs.langchain.com/oss/javascript/langgraph/quickstart.md)
+- [Run a local server](https://docs.langchain.com/oss/javascript/langgraph/local-server.md)
+- [Thinking in LangGraph](https://docs.langchain.com/oss/javascript/langgraph/thinking-in-langgraph.md): Learn how to think about building agents with LangGraph
+- [Workflows and agents](https://docs.langchain.com/oss/javascript/langgraph/workflows-agents.md)
+
+#### Capabilities
+
+- [Persistence](https://docs.langchain.com/oss/javascript/langgraph/persistence.md): LangGraph's persistence layer gives agents short-term memory through checkpointers and long-term memory through stores.
+- [Fault tolerance](https://docs.langchain.com/oss/javascript/langgraph/fault-tolerance.md): Configure per-node timeouts, retries, and error handlers in LangGraph.
+- [Checkpointers](https://docs.langchain.com/oss/javascript/langgraph/checkpointers.md): LangGraph checkpointers save graph state as checkpoints at each step, enabling persistence, human-in-the-loop, and fault-tolerant execution.
+- [Stores](https://docs.langchain.com/oss/javascript/langgraph/stores.md): LangGraph stores provide cross-thread long-term memory, complementing per-thread checkpointer persistence.
+- [Event streaming](https://docs.langchain.com/oss/javascript/langgraph/event-streaming.md): Stream LangGraph runs with typed projections for messages, state, subgraphs, output, and extensions.
+- [Streaming](https://docs.langchain.com/oss/javascript/langgraph/streaming.md)
+- [Interrupts](https://docs.langchain.com/oss/javascript/langgraph/interrupts.md)
+- [Use time-travel](https://docs.langchain.com/oss/javascript/langgraph/use-time-travel.md): Replay past executions and fork to explore alternative paths in LangGraph
+- [Memory](https://docs.langchain.com/oss/javascript/langgraph/add-memory.md)
+- [Subgraphs](https://docs.langchain.com/oss/javascript/langgraph/use-subgraphs.md)
+
+#### Production
+
+- [Application structure](https://docs.langchain.com/oss/javascript/langgraph/application-structure.md)
+- [Test](https://docs.langchain.com/oss/javascript/langgraph/test.md)
+- [Backward compatibility](https://docs.langchain.com/oss/javascript/langgraph/backward-compatibility.md): Update LangGraph graph code in production without breaking in-flight runs.
+- [LangSmith Studio](https://docs.langchain.com/oss/javascript/langgraph/studio.md)
+- [Agent Chat UI](https://docs.langchain.com/oss/javascript/langgraph/ui.md)
+- [Deployment](https://docs.langchain.com/oss/javascript/langgraph/deploy.md): Deploy LangGraph agents to production with LangSmith Cloud or JavaScript frameworks and hosting platforms.
+- [LangSmith Observability](https://docs.langchain.com/oss/javascript/langgraph/observability.md)
+
+#### Frontend
+
+- [Overview](https://docs.langchain.com/oss/javascript/langgraph/frontend/overview.md): Render LangGraph agents to the frontend
+- [Graph execution](https://docs.langchain.com/oss/javascript/langgraph/frontend/graph-execution.md): Visualize multi-step graph pipelines with per-node status and streaming content
+- [Custom stream channels](https://docs.langchain.com/oss/javascript/langgraph/frontend/custom-stream-channels.md): Stream custom server-side data to the frontend and read it with useExtension and useChannel
+
+#### LangGraph APIs
+
+- [LangGraph runtime](https://docs.langchain.com/oss/javascript/langgraph/pregel.md)
+
+##### Graph API
+
+- [Choosing between Graph and Functional APIs](https://docs.langchain.com/oss/javascript/langgraph/choosing-apis.md)
+- [Graph API overview](https://docs.langchain.com/oss/javascript/langgraph/graph-api.md): LangGraph models agent workflows as graphs: define state, nodes, and edges with StateGraph to build looping, stateful workflows.
+- [Use the graph API](https://docs.langchain.com/oss/javascript/langgraph/use-graph-api.md)
+
+##### Functional API
+
+- [Functional API overview](https://docs.langchain.com/oss/javascript/langgraph/functional-api.md)
+- [Use the functional API](https://docs.langchain.com/oss/javascript/langgraph/use-functional-api.md)
+
+### OpenWiki
+
+- [OpenWiki](https://docs.langchain.com/oss/openwiki/overview.md): CLI that writes and maintains agent wikis so coding agents work faster
+- [Quickstart](https://docs.langchain.com/oss/openwiki/quickstart.md): Install OpenWiki, configure a model provider, and generate your first wiki.
+- [Coding-agent integrations](https://docs.langchain.com/oss/openwiki/integrations.md): Run OpenWiki inside Codex, Claude Code, GitHub Copilot, OpenCode, Cursor, IBM Bob, Kiro, Oh My Pi, or Antigravity using the host model and tools
+- [Search and link wikis](https://docs.langchain.com/oss/openwiki/search-and-link.md): Search OpenWiki pages over MCP and group related repository wikis into workspaces
+- [Visualize your wiki](https://docs.langchain.com/oss/openwiki/visualize.md): Explore an OpenWiki Markdown wiki with a local interactive node graph and reader
+- [Command reference](https://docs.langchain.com/oss/openwiki/cli-reference.md): OpenWiki command-line usage, flags, and connector subcommands
+- [Customize OpenWiki](https://docs.langchain.com/oss/openwiki/customize.md): Ignore paths, wiki instructions, agent pointers, and telemetry for OpenWiki
+- [Model providers](https://docs.langchain.com/oss/openwiki/providers.md): Configure inference providers and credentials for OpenWiki
+- [Automate updates](https://docs.langchain.com/oss/openwiki/automate-updates.md): Schedule OpenWiki documentation updates with GitHub Actions, GitLab CI, or Bitbucket Pipelines
+
+#### Modes
+
+- [Code mode](https://docs.langchain.com/oss/openwiki/code-mode.md): Generate and maintain repository documentation for coding agents with OpenWiki
+- [Personal mode](https://docs.langchain.com/oss/openwiki/personal-mode.md): Build a local personal brain wiki from configured sources with OpenWiki.
+
+### Integrations
+
+- [LangChain JavaScript integrations](https://docs.langchain.com/oss/javascript/integrations/providers/overview.md): Integrate with providers using LangChain JavaScript/TypeScript.
+- [All LangChain JavaScript integration providers](https://docs.langchain.com/oss/javascript/integrations/providers/all_providers.md)
+
+#### Popular Providers
+
+##### OpenAI
+
+- [OpenAI integrations](https://docs.langchain.com/oss/javascript/integrations/providers/openai.md): Integrate with OpenAI using LangChain JavaScript.
+- [ChatOpenAI integration](https://docs.langchain.com/oss/javascript/integrations/chat/openai.md): Integrate with the ChatOpenAI chat model using LangChain JavaScript.
+- [OpenAIEmbeddings integration](https://docs.langchain.com/oss/javascript/integrations/embeddings/openai.md): Integrate with the OpenAIEmbeddings embedding model using LangChain JavaScript.
+- [OpenAI integration](https://docs.langchain.com/oss/javascript/integrations/tools/openai.md): Integrate with the OpenAI tool using LangChain JavaScript.
+
+##### Anthropic
+
+- [Anthropic integrations](https://docs.langchain.com/oss/javascript/integrations/providers/anthropic.md): Integrate with Anthropic using LangChain JavaScript.
+- [ChatAnthropic integration](https://docs.langchain.com/oss/javascript/integrations/chat/anthropic.md): Integrate with the ChatAnthropic chat model using LangChain JavaScript.
+- [Anthropic integration](https://docs.langchain.com/oss/javascript/integrations/tools/anthropic.md): Integrate with the Anthropic tool using LangChain JavaScript.
+
+##### Google
+
+- [Google integrations](https://docs.langchain.com/oss/javascript/integrations/providers/google.md): Integrate with Google using LangChain JavaScript.
+- [ChatGoogle integration](https://docs.langchain.com/oss/javascript/integrations/chat/google.md): Integrate with the ChatGoogle chat model using LangChain JavaScript.
+- [Google integration](https://docs.langchain.com/oss/javascript/integrations/tools/google.md): Integrate with Google Gemini tools using LangChain JavaScript.
+- [ChatGoogleGenerativeAI integration](https://docs.langchain.com/oss/javascript/integrations/chat/google_generative_ai.md): Integrate with the ChatGoogleGenerativeAI chat model using LangChain JavaScript.
+- [ChatVertexAI integration](https://docs.langchain.com/oss/javascript/integrations/chat/google_vertex_ai.md): Integrate with the ChatVertexAI chat model using LangChain JavaScript.
+
+##### AWS
+
+- [AWS integrations](https://docs.langchain.com/oss/javascript/integrations/providers/aws.md): Integrate with AWS using LangChain JavaScript.
+- [ChatBedrockConverse integration](https://docs.langchain.com/oss/javascript/integrations/chat/bedrock_converse.md): Integrate with the ChatBedrockConverse chat model using LangChain JavaScript.
+- [BedrockEmbeddings integration](https://docs.langchain.com/oss/javascript/integrations/embeddings/bedrock.md): Integrate with the BedrockEmbeddings embedding model using LangChain JavaScript.
+
+##### Microsoft
+
+- [Microsoft integrations](https://docs.langchain.com/oss/javascript/integrations/providers/microsoft.md): Integrate with Microsoft using LangChain JavaScript.
+- [AzureChatOpenAI integration](https://docs.langchain.com/oss/javascript/integrations/chat/azure.md): Integrate with the AzureChatOpenAI chat model using LangChain JavaScript.
+- [AzureOpenAIEmbeddings integration](https://docs.langchain.com/oss/javascript/integrations/embeddings/azure_openai.md): Integrate with the AzureOpenAIEmbeddings embedding model using LangChain JavaScript.
+
+#### General integrations
+
+- [Chat model integrations](https://docs.langchain.com/oss/javascript/integrations/chat/index.md): Integrate with chat models using LangChain JavaScript.
+- [Tool integrations](https://docs.langchain.com/oss/javascript/integrations/tools/index.md): Integrate with tools using LangChain JavaScript.
+- [LLM integrations](https://docs.langchain.com/oss/javascript/integrations/llms/index.md): Integrate with LLMs using LangChain JavaScript.
+- [Middleware integrations](https://docs.langchain.com/oss/javascript/integrations/middleware/index.md): Integrate with middleware using LangChain JavaScript.
+- [Sandbox integrations](https://docs.langchain.com/oss/javascript/integrations/sandboxes/index.md): Integrate with sandbox providers using LangChain JavaScript.
+- [Backend integrations](https://docs.langchain.com/oss/javascript/integrations/backends/index.md): Filesystem backends for Deep Agents.
+- [Store integrations](https://docs.langchain.com/oss/javascript/integrations/stores/index.md): Integrate with stores using LangChain JavaScript.
+- [Store integrations](https://docs.langchain.com/oss/javascript/integrations/long-term-memory/index.md): Integrate with store backends for LangGraph long-term memory.
+- [Document transformer integrations](https://docs.langchain.com/oss/javascript/integrations/document_transformers/index.md): Integrate with document transformers using LangChain JavaScript.
+- [Cache integrations](https://docs.langchain.com/oss/javascript/integrations/llm_caching/index.md): Integrate with caches using LangChain JavaScript.
+
+#### RAG integrations
+
+- [Retriever integrations](https://docs.langchain.com/oss/javascript/integrations/retrievers/index.md): Integrate with retrievers using LangChain JavaScript.
+- [Text splitter integrations](https://docs.langchain.com/oss/javascript/integrations/splitters/index.md): Integrate with text splitters using LangChain.
+- [Embedding model integrations](https://docs.langchain.com/oss/javascript/integrations/embeddings/index.md): Integrate with embedding models using LangChain JavaScript.
+- [Vector store integrations](https://docs.langchain.com/oss/javascript/integrations/vectorstores/index.md): Integrate with vector stores using LangChain JavaScript.
+- [Document loader integrations](https://docs.langchain.com/oss/javascript/integrations/document_loaders/index.md): Integrate with document loaders using LangChain JavaScript.
+- [Store integrations](https://docs.langchain.com/oss/javascript/integrations/stores/index.md): Integrate with stores using LangChain JavaScript.
+
+### Learn
+
+- [Learn](https://docs.langchain.com/oss/javascript/learn.md): Tutorials, conceptual guides, and resources to help you get started.
+
+#### Tutorials
+
+##### Deep Agents
+
+- [Build a deep research agent](https://docs.langchain.com/oss/javascript/deepagents/deep-research.md): Build a multi-step web research agent with subagent delegation using Managed Deep Agents or the Deep Agents SDK
+- [Build a content builder agent](https://docs.langchain.com/oss/javascript/deepagents/content-builder.md): Build a content writing agent with brand voice, skills, subagents, and image generation using Managed Deep Agents or the Deep Agents SDK
+- [Retrieval Augmented Generation (RAG) with Deep Agents](https://docs.langchain.com/oss/javascript/deepagents/rag.md): RAG patterns for Deep Agents, including skills-guided retrieval, rubric grading, and a tutorial that indexes LangChain docs, offloads chunks to the filesystem, and delegates analysis to subagents
+
+##### LangChain
+
+- [Build a data analysis agent from scratch](https://docs.langchain.com/oss/javascript/langchain/deep-agent-from-scratch.md): Build a data analysis agent step by step using create_agent and Deep Agents middleware.
+- [Build a semantic search engine with LangChain](https://docs.langchain.com/oss/javascript/langchain/knowledge-base.md)
+- [Build a SQL agent](https://docs.langchain.com/oss/javascript/langchain/sql-agent.md)
+- [Build a voice agent with LangChain](https://docs.langchain.com/oss/javascript/langchain/voice-agent.md)
+
+##### Multi-agent
+
+- [Build a personal assistant with subagents](https://docs.langchain.com/oss/javascript/langchain/multi-agent/subagents-personal-assistant.md)
+- [Build customer support with handoffs](https://docs.langchain.com/oss/javascript/langchain/multi-agent/handoffs-customer-support.md)
+- [Build a multi-source knowledge base with routing](https://docs.langchain.com/oss/javascript/langchain/multi-agent/router-knowledge-base.md)
+- [Build a SQL assistant with on-demand skills](https://docs.langchain.com/oss/javascript/langchain/multi-agent/skills-sql-assistant.md)
+
+##### LangGraph
+
+- [Build a custom RAG agent with LangGraph](https://docs.langchain.com/oss/javascript/langgraph/agentic-rag.md): Build a custom retrieval agent with LangGraph that decides when to search a vector store or respond directly.
+- [Build a custom SQL agent](https://docs.langchain.com/oss/javascript/langgraph/sql-agent.md)
+
+#### Conceptual overviews
+
+- [Runtimes, frameworks, and harnesses](https://docs.langchain.com/oss/javascript/concepts/products.md): Understand the differences between LangChain, LangGraph, and Deep Agents and when to use each one
+- [Providers and models](https://docs.langchain.com/oss/javascript/concepts/providers-and-models.md): Understand how LangChain uses providers to give you a single API for any model from any provider
+- [Component architecture](https://docs.langchain.com/oss/javascript/langchain/component-architecture.md)
+- [Memory overview](https://docs.langchain.com/oss/javascript/concepts/memory.md)
+- [Context overview](https://docs.langchain.com/oss/javascript/concepts/context.md)
+- [Human-in-the-loop overview](https://docs.langchain.com/oss/javascript/concepts/human-in-the-loop.md): How agents pause tool calls for human review, and how per-call and batched interrupts differ.
+- [Graph API overview](https://docs.langchain.com/oss/javascript/langgraph/graph-api.md): LangGraph models agent workflows as graphs: define state, nodes, and edges with StateGraph to build looping, stateful workflows.
+- [Functional API overview](https://docs.langchain.com/oss/javascript/langgraph/functional-api.md)
+
+#### Additional resources
+
+- [Use docs programmatically](https://docs.langchain.com/use-these-docs.md): Connect LangChain documentation to your AI tools and workflows
+- [Case studies](https://docs.langchain.com/oss/javascript/langgraph/case-studies.md)
+- [Get help](https://docs.langchain.com/oss/javascript/langchain/get-help.md)
+
+### Reference
+
+- [Reference](https://docs.langchain.com/oss/javascript/reference/overview.md)
+
+#### Reference
+
+- [Errors](https://docs.langchain.com/oss/javascript/common-errors.md)
+
+#### Releases
+
+- [Versioning](https://docs.langchain.com/oss/javascript/versioning.md)
+- [Changelog](https://docs.langchain.com/oss/javascript/releases/changelog.md): Log of updates and improvements to our JavaScript/TypeScript packages
+
+##### Releases
+
+- [What's new in LangChain v1](https://docs.langchain.com/oss/javascript/releases/langchain-v1.md)
+- [What's new in LangGraph v1](https://docs.langchain.com/oss/javascript/releases/langgraph-v1.md)
+
+##### Migration guides
+
+- [LangChain v1 migration guide](https://docs.langchain.com/oss/javascript/migrate/langchain-v1.md)
+- [LangGraph v1 migration guide](https://docs.langchain.com/oss/javascript/migrate/langgraph-v1.md)
+- [Migrate to @langchain/mcp-adapters 2.0](https://docs.langchain.com/oss/javascript/migrate/langchain-mcp-adapters.md): Upgrade from @langchain/mcp-adapters 1.x to 2.0, covering renamed APIs, stricter configuration, authentication, elicitation, and tool result changes.
+
+#### Policies
+
+- [Release policy](https://docs.langchain.com/oss/javascript/release-policy.md)
+- [Security policy](https://docs.langchain.com/oss/javascript/security-policy.md)
+
+### Contribute
+
+- [Contributing](https://docs.langchain.com/oss/javascript/contributing/overview.md)
+
+#### Contribute
+
+- [Contributing to documentation](https://docs.langchain.com/oss/javascript/contributing/documentation.md)
+- [Contributing to code](https://docs.langchain.com/oss/javascript/contributing/code.md)
+
+##### Integrations
+
+- [Contributing integrations](https://docs.langchain.com/oss/javascript/contributing/integrations-langchain.md)
+- [Implement a LangChain integration](https://docs.langchain.com/oss/javascript/contributing/implement-langchain.md)
+- [Using standard tests](https://docs.langchain.com/oss/javascript/contributing/standard-tests-langchain.md)
+- [Publish an integration](https://docs.langchain.com/oss/javascript/contributing/publish-langchain.md)
+- [Co-marketing](https://docs.langchain.com/oss/javascript/contributing/comarketing.md)
